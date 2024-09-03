@@ -1,0 +1,60 @@
+A thread can be created by 2 ways
+1. By extending a thread class
+2. by implementing runnable interface
+
+
+-------extending a thread class------
+
+eg:
+
+class mythread1 extends Thread{
+@override
+Public void run(){
+//any content//
+}
+}
+
+class mythread2 extends Thread{
+public void run(){
+// any content
+}
+
+public class main{
+public static void main(){
+mythread1 t1 = new mythrea;d1();
+mythread2  12= new mythread2();
+t1.start();
+t2.start();
+ // this will execute the procedures of both threads simultaneously
+
+
+
+// by impleting runnable interface
+
+u need to creat a runnable interface class
+
+eg:
+
+class running implements runnable{
+ void run()
+{
+// code to process
+}
+
+in main class
+
+running bullet1 = new running();
+running bullet 2 = new running();
+
+// here these two running class need to be constructed to a thread
+
+Thread gun1=new Thread(bullet1);
+Thread gun2= new Thread(bullet2);
+
+gun1.start();
+gun2.start();
+
+
+runnable interface runs multiple threads so need to use .currentThread() to get info of current thread
+
+The join(long millis) method in Java allows one thread to wait for another thread to finish execution for a specified amount of time (millis). If the thread that join() is called on does not finish within that time, the waiting thread will resume execution regardless of whether the other thread has finished or not.
